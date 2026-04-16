@@ -13,12 +13,12 @@ const LINKS = [
 
 function FooterComponent() {
   return (
-    <footer className="px-6 py-10 border-t border-white/10">
+    <footer className="px-6 py-10 border-t border-white/20">
       <div className="mx-auto w-full max-w-6xl flex flex-col md:flex-row items-center justify-between gap-6">
-        <div className="text-sm text-gray-400">&copy; 2026 Lucas Pereira. All rights reserved.</div>
-        <nav className="flex flex-wrap gap-4 text-sm text-gray-400">
+        <div className="text-sm text-white/60">&copy; 2026 Lucas Pereira. All rights reserved.</div>
+        <nav className="flex flex-wrap gap-4 text-sm text-white/60">
           {LINKS.map((link) => (
-            <a key={link.href} href={link.href} className="hover:text-blue-400 transition">
+            <a key={link.href} href={link.href} className="hover:text-white transition">
               {link.label}
             </a>
           ))}

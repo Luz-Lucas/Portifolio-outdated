@@ -19,13 +19,13 @@ function AboutComponent() {
           <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-black via-black/50 to-transparent pointer-events-none" />
         </div>
         <div className="space-y-6 text-center lg:text-left">
-          <p className="text-sm uppercase tracking-[0.3em] text-gray-400">About me</p>
-          <h2 className="text-3xl md:text-4xl font-semibold">Balancing education with real-world impact</h2>
-          <p className="text-gray-300 leading-relaxed">
-            I'm a driven Software Engineering student from Santa Rita do Sapucaí, Minas Gerais, deeply passionate about front-end development. At CP2 Junior Company, I've worked as a Junior Developer, collaborating with cross-functional teams to build client-facing web applications using React, TypeScript, and modern web standards. My focus is on crafting responsive, performant interfaces that prioritize user experience.
+          <p className="text-sm uppercase tracking-[0.3em] text-white/60">About me</p>
+          <h2 className="text-3xl md:text-4xl font-semibold">Student & Developer</h2>
+          <p className="text-white/80 leading-relaxed">
+            Software Engineering student from Minas Gerais, working as a Junior Developer at CP2. I build client-facing apps using React and TypeScript, focusing on responsive, performant interfaces.
           </p>
-          <p className="text-gray-300 leading-relaxed">
-            My technical foundation spans HTML5, CSS3, JavaScript (ES6+), React, TypeScript, Tailwind CSS, and tools like Git, VS Code, and Figma. I'm actively exploring the full-stack landscape with Node.js, Express, REST APIs, and databases like MongoDB and PostgreSQL. Beyond code, I thrive in collaborative Agile environments, participating in code reviews and pair programming to elevate team quality. I'm eager to bring my front-end expertise and growth mindset to innovative projects.
+          <p className="text-white/80 leading-relaxed">
+            Skilled in modern front-end tools (React, Tailwind, Figma) and expanding into full-stack (Node.js, PostgreSQL). I thrive in Agile teams, valuing code reviews and pair programming to deliver high-quality code.
           </p>
         </div>
       </div>

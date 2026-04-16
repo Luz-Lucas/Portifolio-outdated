@@ -80,28 +80,27 @@ function ContactComponent() {
     <section id="contact" className="px-6 py-20">
       <div className="mx-auto w-full max-w-6xl grid grid-cols-1 lg:grid-cols-2 gap-10">
         <div className="space-y-6">
-          <p className="text-sm uppercase tracking-[0.3em] text-gray-400">Contact</p>
+          <p className="text-sm uppercase tracking-[0.3em] text-white/60">Contact</p>
           <h2 className="text-3xl md:text-4xl font-semibold">
             Let&apos;s build something together
           </h2>
-          <p className="text-gray-300">
-            Have a project in mind or want to discuss an opportunity? Share the
-            details and I&apos;ll get back to you.
+          <p className="text-white/80">
+            Have a project or opportunity? Reach out and I&apos;ll get back to you.
           </p>
-          <address className="space-y-3 text-sm text-gray-300 not-italic">
+          <address className="space-y-3 text-sm text-white/80 not-italic">
             <p>
-              <span className="text-gray-400">Email:</span>{" "}
+              <span className="text-white/60">Email:</span>{" "}
               <a
-                className="hover:text-blue-400 transition"
+                className="hover:text-white transition"
                 href="mailto:lucapmluz@hotmail.com"
               >
                 lucapmluz@hotmail.com
               </a>
             </p>
             <p>
-              <span className="text-gray-400">LinkedIn:</span>{" "}
+              <span className="text-white/60">LinkedIn:</span>{" "}
               <a
-                className="hover:text-blue-400 transition"
+                className="hover:text-white transition"
                 href="https://www.linkedin.com/in/lucas-luz"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -110,9 +109,9 @@ function ContactComponent() {
               </a>
             </p>
             <p>
-              <span className="text-gray-400">GitHub:</span>{" "}
+              <span className="text-white/60">GitHub:</span>{" "}
               <a
-                className="hover:text-blue-400 transition"
+                className="hover:text-white transition"
                 href="https://github.com/Luz-lucas"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -123,7 +122,7 @@ function ContactComponent() {
           </address>
         </div>
         <form
-          className="rounded-2xl border border-white/10 bg-white/5 p-6 space-y-4"
+          className="rounded-2xl border border-white/20 bg-transparent p-6 space-y-4"
           aria-label="Contact form"
           ref={formRef}
           onSubmit={handleSubmit}
@@ -141,7 +140,7 @@ function ContactComponent() {
                 autoComplete="name"
                 required
                 aria-required="true"
-                className="w-full rounded-lg bg-black/40 border border-white/10 px-4 py-3 text-sm text-white placeholder:text-gray-500 focus:outline-none focus:border-blue-600 focus:ring-1 focus:ring-blue-600"
+                className="w-full rounded-lg bg-black/40 border border-white/20 px-4 py-3 text-sm text-white placeholder:text-gray-500 focus:outline-none focus:border-blue-600 focus:ring-1 focus:ring-blue-600"
               />
             </div>
             <div className="space-y-2">
@@ -156,7 +155,7 @@ function ContactComponent() {
                 autoComplete="email"
                 required
                 aria-required="true"
-                className="w-full rounded-lg bg-black/40 border border-white/10 px-4 py-3 text-sm text-white placeholder:text-gray-500 focus:outline-none focus:border-blue-600 focus:ring-1 focus:ring-blue-600"
+                className="w-full rounded-lg bg-black/40 border border-white/20 px-4 py-3 text-sm text-white placeholder:text-gray-500 focus:outline-none focus:border-blue-600 focus:ring-1 focus:ring-blue-600"
               />
             </div>
           </div>
@@ -171,7 +170,7 @@ function ContactComponent() {
               placeholder="Subject"
               required
               aria-required="true"
-              className="w-full rounded-lg bg-black/40 border border-white/10 px-4 py-3 text-sm text-white placeholder:text-gray-500 focus:outline-none focus:border-blue-600 focus:ring-1 focus:ring-blue-600"
+              className="w-full rounded-lg bg-black/40 border border-white/20 px-4 py-3 text-sm text-white placeholder:text-gray-500 focus:outline-none focus:border-blue-600 focus:ring-1 focus:ring-blue-600"
             />
           </div>
           <div className="space-y-2">
@@ -185,13 +184,13 @@ function ContactComponent() {
               placeholder="Message"
               required
               aria-required="true"
-              className="w-full rounded-lg bg-black/40 border border-white/10 px-4 py-3 text-sm text-white placeholder:text-gray-500 focus:outline-none focus:border-blue-600 focus:ring-1 focus:ring-blue-600 resize-y min-h-[120px]"
+              className="w-full rounded-lg bg-black/40 border border-white/20 px-4 py-3 text-sm text-white placeholder:text-gray-500 focus:outline-none focus:border-blue-600 focus:ring-1 focus:ring-blue-600 resize-y min-h-[120px]"
             />
           </div>
           <button
             type="submit"
             disabled={isLoading}
-            className="w-full md:w-auto px-6 py-3 rounded-full bg-blue-600 text-white font-medium hover:bg-blue-500 transition focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-offset-2 focus:ring-offset-black disabled:opacity-50 disabled:cursor-not-allowed"
+            className="w-full md:w-auto px-6 py-3 rounded-full bg-white text-black font-medium hover:bg-white/90 transition focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-offset-2 focus:ring-offset-black disabled:opacity-50 disabled:cursor-not-allowed"
           >
             {isLoading ? "Sending..." : "Send message"}
           </button>

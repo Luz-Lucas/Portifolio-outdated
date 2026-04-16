@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { Montserrat } from "next/font/google";
 import "./globals.css";
-import { StarsBackgroundWrapper } from "./_components/StarsBackgroundWrapper";
 import { Analytics } from "@vercel/analytics/next"
 import { SpeedInsights } from "@vercel/speed-insights/next"
 
@@ -24,8 +23,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${montserrat.variable} antialiased`}>
-        <StarsBackgroundWrapper>{children}</StarsBackgroundWrapper>
+      <body className={`${montserrat.variable} antialiased bg-black text-white`}>
+        {children}
       </body>
     </html>
   );
