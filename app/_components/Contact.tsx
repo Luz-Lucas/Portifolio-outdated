@@ -92,9 +92,9 @@ function ContactComponent() {
               <span className="text-white/60">Email:</span>{" "}
               <a
                 className="hover:text-white transition"
-                href="mailto:lucapmluz@hotmail.com"
+                href="mailto:lucaspmluz@hotmail.com"
               >
-                lucapmluz@hotmail.com
+                lucaspmluz@hotmail.com
               </a>
             </p>
             <p>
