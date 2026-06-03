@@ -7,7 +7,8 @@ const EXPERIENCES = [
     role: "Junior Developer",
     company: "CP2 Junior Company",
     period: "2024 - Present",
-    description: "Building responsive, client-facing web applications using React and TypeScript in cross-functional teams.",
+    description:
+      "Building responsive, client-facing web applications using React and TypeScript in cross-functional teams.",
     highlights: [
       "Developed 5+ client projects using React and TypeScript",
       "Implemented responsive designs improving mobile UX",
@@ -18,7 +19,8 @@ const EXPERIENCES = [
     role: "Software Engineering Student",
     company: "University",
     period: "2022 - Present",
-    description: "Pursuing a Software Engineering degree alongside extracurricular coding projects.",
+    description:
+      "Pursuing a Software Engineering degree alongside extracurricular coding projects.",
     highlights: [
       "Active member of programming community",
       "Completed advanced coursework in algorithms and data structures",
@@ -29,40 +31,55 @@ const EXPERIENCES = [
 
 function ExperienceComponent() {
   return (
-    <section id="experience" className="px-6 py-20">
-      <div className="mx-auto w-full max-w-6xl space-y-10">
-        <div className="space-y-3 text-center lg:text-left">
-          <p className="text-sm uppercase tracking-[0.3em] text-white/60">
+    <section
+      id="experience"
+      className="relative overflow-hidden bg-black px-6 py-20"
+    >
+      <div className="absolute bottom-1/4 right-0 -z-10 h-96 w-96 rounded-full bg-red-600/10 blur-3xl" />
+
+      <div className="absolute left-0 right-0 top-0 h-1 bg-gradient-to-r from-transparent via-red-600 to-transparent" />
+
+      <div className="mx-auto w-full max-w-6xl space-y-12">
+        <div className="space-y-4 text-center lg:text-left">
+          <p className="text-xs font-black uppercase tracking-[0.35em] text-red-600">
             Experience
           </p>
-          <h2 className="text-3xl md:text-4xl font-semibold">
-            Professional journey & education
+          <h2 className="text-5xl font-black text-white md:text-6xl">
+            Professional journey &<span className="block text-red-600">education</span>
           </h2>
-          <p className="text-white/80 max-w-2xl mx-auto lg:mx-0">
+          <p className="mx-auto max-w-2xl text-lg text-white/70 lg:mx-0">
             Combining academic knowledge with real-world experience at CP2.
           </p>
         </div>
+
         <div className="space-y-6">
           {EXPERIENCES.map((exp) => (
             <article
-              key={exp.company}
-              className="rounded-2xl border border-white/20 bg-transparent p-6 space-y-4"
+              key={`${exp.company}-${exp.role}`}
+              className="space-y-3 rounded-lg border-2 border-red-700 bg-transparent p-6 transition duration-300 hover:border-red-600"
             >
-              <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
-                <div>
-                  <h3 className="text-lg font-semibold">{exp.role}</h3>
-                  <p className="text-white">{exp.company}</p>
+              <div className="flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
+                <div className="space-y-1">
+                  <h3 className="text-lg font-semibold text-white">{exp.role}</h3>
+                  <p className="font-medium text-red-700">{exp.company}</p>
                 </div>
-                <span className="text-sm text-white/60">{exp.period}</span>
+                <span className="whitespace-nowrap text-xs text-white/50">
+                  {exp.period}
+                </span>
               </div>
-              <p className="text-white/80 leading-relaxed">
+
+              <p className="text-sm leading-relaxed text-white/70">
                 {exp.description}
               </p>
-              <ul className="space-y-2">
+
+              <ul className="space-y-1 pt-2">
                 {exp.highlights.map((highlight) => (
-                  <li key={highlight} className="flex items-start gap-2 text-sm text-white/80">
-                    <span className="text-white/80 mt-1">•</span>
-                    {highlight}
+                  <li
+                    key={highlight}
+                    className="flex items-start gap-2 text-xs text-white/60"
+                  >
+                    <span className="mt-0.5 font-bold text-red-700">•</span>
+                    <span>{highlight}</span>
                   </li>
                 ))}
               </ul>

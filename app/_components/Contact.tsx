@@ -41,108 +41,132 @@ function ContactComponent() {
     }
   };
 
-  return (
-    <section id="contact" className="px-6 py-20">
-      <div className="mx-auto w-full max-w-6xl grid grid-cols-1 lg:grid-cols-2 gap-10">
+  const inputClass =
+    "w-full bg-black border border-white/20 px-4 py-3 text-sm text-white placeholder:text-white/25 focus:outline-none transition-all duration-200 focus:border-red-600 focus:border-2 rounded-lg";
 
-        {/* Left — contact info */}
-        <div className="space-y-6">
-          <p className="text-sm uppercase tracking-[0.3em] text-white/60">Contact</p>
-          <h2 className="text-3xl md:text-4xl font-semibold">
-            Let&apos;s build something together
-          </h2>
-          <p className="text-white/80">
-            Have a project or opportunity? Reach out and I&apos;ll get back to you.
+  return (
+    <section id="contact" className="relative bg-black px-6 py-24">
+      {/* Section header */}
+      <div className="mx-auto w-full max-w-6xl mb-16">
+        <div className="flex items-center gap-4">
+          <span className="block w-1 h-12 bg-red-700" />
+          <div>
+            <p className="text-xs uppercase tracking-[0.4em] text-red-700 font-semibold">Contact</p>
+            <h2 className="mt-2 text-4xl md:text-5xl font-bold text-white leading-tight">
+              Let&apos;s work together
+            </h2>
+          </div>
+        </div>
+      </div>
+
+      {/* Grid */}
+      <div className="mx-auto w-full max-w-6xl grid grid-cols-1 lg:grid-cols-2 gap-16 border-t border-white/10 pt-12">
+
+        {/* Left — info */}
+        <div className="space-y-8">
+          <p className="text-white/70 text-sm leading-relaxed">
+            Have a project or opportunity? Reach out and I&apos;ll get back to you soon.
           </p>
-          <address className="space-y-3 text-sm text-white/80 not-italic">
-            <p>
-              <span className="text-white/60">Email:</span>{" "}
-              <a className="hover:text-white transition" href="mailto:lucaspmluz@hotmail.com">
+
+          <div className="space-y-6">
+            {/* Email */}
+            <div className="border-l-2 border-red-700 pl-4">
+              <p className="text-[10px] uppercase tracking-[0.3em] text-red-700 font-semibold mb-1">Email</p>
+              <a
+                href="mailto:lucaspmluz@hotmail.com"
+                className="text-sm text-white hover:text-red-600 transition-colors duration-300"
+              >
                 lucaspmluz@hotmail.com
               </a>
-            </p>
-            <p>
-              <span className="text-white/60">LinkedIn:</span>{" "}
+            </div>
+
+            {/* LinkedIn */}
+            <div className="border-l-2 border-red-700 pl-4">
+              <p className="text-[10px] uppercase tracking-[0.3em] text-red-700 font-semibold mb-1">LinkedIn</p>
               <a
-                className="hover:text-white transition"
                 href="https://www.linkedin.com/in/lucas-luz"
                 target="_blank"
                 rel="noopener noreferrer"
+                className="text-sm text-white hover:text-red-700 transition-colors duration-300"
               >
                 linkedin.com/in/lucas-luz
               </a>
-            </p>
-            <p>
-              <span className="text-white/60">GitHub:</span>{" "}
+            </div>
+
+            {/* GitHub */}
+            <div className="border-l-2 border-red-700 pl-4">
+              <p className="text-[10px] uppercase tracking-[0.3em] text-red-700 font-semibold mb-1">GitHub</p>
               <a
-                className="hover:text-white transition"
                 href="https://github.com/Luz-lucas"
                 target="_blank"
                 rel="noopener noreferrer"
+                className="text-sm text-white hover:text-red-700 transition-colors duration-300"
               >
                 github.com/Luz-lucas
               </a>
-            </p>
-          </address>
+            </div>
+          </div>
         </div>
 
-        {/* Right — form or success state */}
+        {/* Right — form or success */}
         {sent ? (
-          <div className="rounded-2xl border border-white/20 p-6 flex flex-col justify-center gap-3">
-            <span className="text-2xl">✓</span>
-            <p className="text-white font-medium">Message sent.</p>
-            <p className="text-sm text-white/60">I&apos;ll get back to you soon.</p>
+          <div className="flex flex-col justify-center gap-6 border-2 border-red-600 bg-red-600/10 backdrop-blur-sm p-10 rounded-xl shadow-lg shadow-red-600/20">
+            <div className="text-6xl font-black text-red-600">✓</div>
+            <div>
+              <p className="text-white text-3xl font-black">Message sent</p>
+              <p className="text-white/70 text-base mt-2 font-semibold">I&apos;ll get back to you soon.</p>
+            </div>
             <button
               onClick={() => setSent(false)}
-              className="mt-2 text-xs text-white/40 hover:text-white/70 transition w-fit"
+              className="mt-4 text-xs uppercase tracking-widest text-red-700 hover:text-red-600 transition-colors w-fit font-semibold"
             >
-              Send another
+              Send another →
             </button>
           </div>
         ) : (
-          <form
-            onSubmit={handleSubmit}
-            className="rounded-2xl border border-white/20 bg-transparent p-6 space-y-4"
-          >
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              <input
-                type="text"
-                name="name"
-                placeholder="Name"
+          <form onSubmit={handleSubmit} className="space-y-5">
+            {/* Name + Email row */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div className="space-y-2">
+                <label className="text-[11px] uppercase tracking-[0.3em] text-white font-black">Name</label>
+                <input type="text" name="name" placeholder="Your name" required className={inputClass} />
+              </div>
+              <div className="space-y-2">
+                <label className="text-[11px] uppercase tracking-[0.3em] text-white font-black">Email</label>
+                <input type="email" name="email" placeholder="your@email.com" required className={inputClass} />
+              </div>
+            </div>
+
+            {/* Subject */}
+            <div className="space-y-2">
+              <label className="text-[11px] uppercase tracking-[0.3em] text-white font-black">Subject</label>
+              <input type="text" name="subject" placeholder="What's this about?" required className={inputClass} />
+            </div>
+
+            {/* Message */}
+            <div className="space-y-2">
+              <label className="text-[11px] uppercase tracking-[0.3em] text-white font-black">Message</label>
+              <textarea
+                name="message"
+                rows={5}
+                placeholder="Tell me about your project..."
                 required
-                className="w-full rounded-lg bg-black/40 border border-white/20 px-4 py-3 text-sm text-white placeholder:text-gray-500 focus:outline-none focus:border-blue-600 focus:ring-1 focus:ring-blue-600"
-              />
-              <input
-                type="email"
-                name="email"
-                placeholder="Email"
-                required
-                className="w-full rounded-lg bg-black/40 border border-white/20 px-4 py-3 text-sm text-white placeholder:text-gray-500 focus:outline-none focus:border-blue-600 focus:ring-1 focus:ring-blue-600"
+                className={`${inputClass} resize-y min-h-[140px]`}
               />
             </div>
-            <input
-              type="text"
-              name="subject"
-              placeholder="Subject"
-              required
-              className="w-full rounded-lg bg-black/40 border border-white/20 px-4 py-3 text-sm text-white placeholder:text-gray-500 focus:outline-none focus:border-blue-600 focus:ring-1 focus:ring-blue-600"
-            />
-            <textarea
-              name="message"
-              rows={5}
-              placeholder="Message"
-              required
-              className="w-full rounded-lg bg-black/40 border border-white/20 px-4 py-3 text-sm text-white placeholder:text-gray-500 focus:outline-none focus:border-blue-600 focus:ring-1 focus:ring-blue-600 resize-y min-h-[120px]"
-            />
+
+            {/* Error */}
             {error && (
-              <p className="text-xs text-red-400">{error}</p>
+              <p className="text-xs text-red-600 font-black bg-red-600/20 px-4 py-3 rounded-lg border-2 border-red-600">{error}</p>
             )}
+
+            {/* Submit */}
             <button
               type="submit"
               disabled={isLoading}
-              className="w-full md:w-auto px-6 py-3 rounded-full bg-white text-black font-medium hover:bg-white/90 transition disabled:opacity-50 disabled:cursor-not-allowed"
+              className="w-full mt-4 px-8 py-4 text-sm font-black uppercase tracking-widest text-white bg-red-600 hover:bg-red-700 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed rounded-lg shadow-lg shadow-red-600/40 hover:shadow-red-600/60 border-2 border-red-600 hover:border-red-700"
             >
-              {isLoading ? "Sending..." : "Send message"}
+              {isLoading ? "Sending..." : "Send Message"}
             </button>
           </form>
         )}

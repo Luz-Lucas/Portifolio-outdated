@@ -37,28 +37,26 @@ const SKILL_GROUPS = [
 
 function SkillsComponent() {
   return (
-    <section id="skills" className="px-6 py-20">
-      <div className="mx-auto w-full max-w-6xl space-y-10">
-        <div className="space-y-3 text-center lg:text-left">
-          <p className="text-sm uppercase tracking-[0.3em] text-white/60">My skills</p>
-          <h2 className="text-3xl md:text-4xl font-semibold">Front-end expertise with full-stack foundations</h2>
-          <p className="text-white/80 max-w-2xl mx-auto lg:mx-0">
-            Proficient in React and TypeScript, with growing full-stack capabilities.
-          </p>
+    <section id="skills" className="relative px-6 py-20 bg-black">
+      <div className="mx-auto w-full max-w-6xl space-y-12">
+        <div className="space-y-4 text-center lg:text-left">
+          <p className="text-xs uppercase tracking-[0.35em] text-red-700 font-semibold">Skills</p>
+          <h2 className="text-4xl md:text-5xl font-bold text-white">Front-end expertise</h2>
         </div>
+        
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {SKILL_GROUPS.map((group) => (
             <article
               key={group.title}
-              className="rounded-2xl border border-white/20 bg-transparent p-6 space-y-4"
+              className="rounded-lg border-2 border-red-700 bg-transparent p-6 space-y-3 hover:border-red-600 transition duration-300"
             >
-              <h3 className="text-lg font-semibold">{group.title}</h3>
-              <p className="text-white/80 text-sm leading-relaxed">{group.description}</p>
-              <div className="flex flex-wrap gap-2">
+              <h3 className="text-base font-semibold text-white">{group.title}</h3>
+              <p className="text-white/60 text-sm leading-relaxed">{group.description}</p>
+              <div className="flex flex-wrap gap-2 pt-2">
                 {group.items.map((item) => (
                   <span
                     key={item}
-                    className="text-xs px-3 py-1 rounded-full bg-white/10 text-white/90"
+                    className="text-xs px-3 py-1 rounded-2xl bg-white/5 text-white/80 border border-white/10 hover:border-red-700 hover:text-red-700 transition"
                   >
                     {item}
                   </span>

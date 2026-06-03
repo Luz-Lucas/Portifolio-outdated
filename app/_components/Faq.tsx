@@ -23,23 +23,20 @@ const FAQS = [
 
 function FaqComponent() {
   return (
-    <section id="faq" className="px-6 py-20">
-      <div className="mx-auto w-full max-w-6xl space-y-10">
-        <div className="space-y-3 text-center lg:text-left">
-          <p className="text-sm uppercase tracking-[0.3em] text-white/60">FAQ</p>
-          <h2 className="text-3xl md:text-4xl font-semibold">Questions about my work & approach</h2>
-          <p className="text-white/80 max-w-2xl mx-auto lg:mx-0">
-            A quick overview of my experience, technical skills, and development philosophy.
-          </p>
+    <section id="faq" className="relative px-6 py-20 bg-black">
+      <div className="mx-auto w-full max-w-6xl space-y-12">
+        <div className="space-y-4 text-center lg:text-left">
+          <p className="text-xs uppercase tracking-[0.35em] text-red-700 font-semibold">FAQ</p>
+          <h2 className="text-4xl md:text-5xl font-bold text-white">Questions & Answers</h2>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {FAQS.map((faq) => (
             <article
               key={faq.question}
-              className="rounded-2xl border border-white/20 bg-transparent p-6 space-y-3"
+              className="rounded-lg border border-white/10 bg-transparent p-6 space-y-3 hover:border-white/20 transition duration-300"
             >
-              <h3 className="text-lg font-semibold">{faq.question}</h3>
-              <p className="text-white/80 text-sm leading-relaxed">{faq.answer}</p>
+              <h3 className="text-base font-semibold text-white hover:text-red-700 transition duration-300">{faq.question}</h3>
+              <p className="text-white/70 text-sm leading-relaxed">{faq.answer}</p>
             </article>
           ))}
         </div>

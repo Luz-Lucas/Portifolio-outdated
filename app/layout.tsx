@@ -3,6 +3,7 @@ import { Montserrat } from "next/font/google";
 import "./globals.css";
 import { Analytics } from "@vercel/analytics/next"
 import { SpeedInsights } from "@vercel/speed-insights/next"
+import { AnimatedBackground } from "@/components/AnimatedBackground";
 
 const montserrat = Montserrat({
   variable: "--font-montserrat",
@@ -24,7 +25,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${montserrat.variable} antialiased bg-black text-white`}>
+        <AnimatedBackground />
         {children}
+        <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   );
