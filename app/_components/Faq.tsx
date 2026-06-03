@@ -33,7 +33,7 @@ function FaqComponent() {
           {FAQS.map((faq) => (
             <article
               key={faq.question}
-              className="rounded-lg border border-white/10 bg-transparent p-6 space-y-3 hover:border-white/20 transition duration-300"
+              className="rounded-2xl border border-white/10 bg-transparent p-6 space-y-3 hover:border-white/20 transition duration-300"
             >
               <h3 className="text-base font-semibold text-white hover:text-red-700 transition duration-300">{faq.question}</h3>
               <p className="text-white/70 text-sm leading-relaxed">{faq.answer}</p>

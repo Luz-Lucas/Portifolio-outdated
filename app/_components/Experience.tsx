@@ -56,7 +56,7 @@ function ExperienceComponent() {
           {EXPERIENCES.map((exp) => (
             <article
               key={`${exp.company}-${exp.role}`}
-              className="space-y-3 rounded-lg border-2 border-red-700 bg-transparent p-6 transition duration-300 hover:border-red-600"
+              className="space-y-3 rounded-2xl border-2 border-red-700 bg-transparent p-6 transition duration-300 hover:border-red-600"
             >
               <div className="flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
                 <div className="space-y-1">

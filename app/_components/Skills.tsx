@@ -48,7 +48,7 @@ function SkillsComponent() {
           {SKILL_GROUPS.map((group) => (
             <article
               key={group.title}
-              className="rounded-lg border-2 border-red-700 bg-transparent p-6 space-y-3 hover:border-red-600 transition duration-300"
+              className="rounded-2xl border-2 border-red-700 bg-transparent p-6 space-y-3 hover:border-red-600 transition duration-300"
             >
               <h3 className="text-base font-semibold text-white">{group.title}</h3>
               <p className="text-white/60 text-sm leading-relaxed">{group.description}</p>

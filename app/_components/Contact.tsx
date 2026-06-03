@@ -42,7 +42,7 @@ function ContactComponent() {
   };
 
   const inputClass =
-    "w-full bg-black border border-white/20 px-4 py-3 text-sm text-white placeholder:text-white/25 focus:outline-none transition-all duration-200 focus:border-red-600 focus:border-2 rounded-lg";
+    "w-full bg-black border border-white/20 px-4 py-3 text-sm text-white placeholder:text-white/25 focus:outline-none transition-all duration-200 focus:border-red-600 focus:border-2 rounded-2xl";
 
   return (
     <section id="contact" className="relative bg-black px-6 py-24">
@@ -110,7 +110,7 @@ function ContactComponent() {
 
         {/* Right — form or success */}
         {sent ? (
-          <div className="flex flex-col justify-center gap-6 border-2 border-red-600 bg-red-600/10 backdrop-blur-sm p-10 rounded-xl shadow-lg shadow-red-600/20">
+          <div className="flex flex-col justify-center gap-6 border-2 border-red-600 bg-red-600/10 backdrop-blur-sm p-10 rounded-2xl shadow-lg shadow-red-600/20">
             <div className="text-6xl font-black text-red-600">✓</div>
             <div>
               <p className="text-white text-3xl font-black">Message sent</p>
@@ -157,14 +157,14 @@ function ContactComponent() {
 
             {/* Error */}
             {error && (
-              <p className="text-xs text-red-600 font-black bg-red-600/20 px-4 py-3 rounded-lg border-2 border-red-600">{error}</p>
+              <p className="text-xs text-red-600 font-black bg-red-600/20 px-4 py-3 rounded-2xl border-2 border-red-600">{error}</p>
             )}
 
             {/* Submit */}
             <button
               type="submit"
               disabled={isLoading}
-              className="w-full mt-4 px-8 py-4 text-sm font-black uppercase tracking-widest text-white bg-red-600 hover:bg-red-700 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed rounded-lg shadow-lg shadow-red-600/40 hover:shadow-red-600/60 border-2 border-red-600 hover:border-red-700"
+              className="w-full mt-4 px-8 py-4 text-sm font-black uppercase tracking-widest text-white bg-red-600 hover:bg-red-700 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed rounded-2xl shadow-lg shadow-red-600/40 hover:shadow-red-600/60 border-2 border-red-600 hover:border-red-700"
             >
               {isLoading ? "Sending..." : "Send Message"}
             </button>

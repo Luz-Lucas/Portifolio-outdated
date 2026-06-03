@@ -58,7 +58,7 @@ function ProjectsComponent() {
                 href={project.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group relative rounded-xl border-2 border-red-600/30 bg-black/60 backdrop-blur-sm p-6 hover:border-red-600 hover:shadow-lg hover:shadow-red-600/20 transition-all duration-300 overflow-hidden"
+                className="group relative rounded-2xl border-2 border-red-600/30 bg-black/60 backdrop-blur-sm p-6 hover:border-red-600 hover:shadow-lg hover:shadow-red-600/20 transition-all duration-300 overflow-hidden"
               >
                 {/* Gradient background on hover */}
                 <div className="absolute inset-0 bg-gradient-to-br from-red-600/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 -z-10" />
@@ -113,7 +113,7 @@ function ProjectsComponent() {
               href={`https://github.com/Luz-Lucas`}
               target="_blank"
               rel="noopener noreferrer"
-              className="px-8 py-3 rounded-lg border-2 border-red-600 text-red-600 font-black hover:bg-red-600 hover:text-black transition-all duration-300 flex items-center gap-2"
+              className="px-8 py-3 rounded-2xl border-2 border-red-600 text-red-600 font-black hover:bg-red-600 hover:text-black transition-all duration-300 flex items-center gap-2"
             >
               View all projects on GitHub
               <ExternalLink className="w-4 h-4" />
