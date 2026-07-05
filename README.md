@@ -1,36 +1,72 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Lucas Pereira — Portfolio
 
-## Getting Started
+Personal portfolio of **Lucas Pereira**, frontend developer and Software Engineering student from Minas Gerais, Brazil.
 
-First, run the development server:
+Dark, red-accented single-page experience built with the modern React stack — animated hero, live GitHub project feed, interactive FAQ, and a working contact form.
+
+## ✨ Features
+
+- **Live GitHub projects** — repositories fetched server-side with ISR (revalidated hourly), sorted by stars
+- **Motion design** — scroll-reveal animations, flip-word hero, animated timeline and accordion powered by [Motion](https://motion.dev)
+- **Fully responsive** — mobile navigation, fluid typography, adaptive grids
+- **Accessible** — semantic landmarks, `aria` attributes, `prefers-reduced-motion` support
+- **SEO-ready** — Open Graph / Twitter metadata, security headers
+- **Contact form** — powered by FormSubmit, no backend or API keys required
+
+## 🛠 Tech Stack
+
+| Layer     | Technology                              |
+| --------- | --------------------------------------- |
+| Framework | [Next.js 16](https://nextjs.org) (App Router, Turbopack) |
+| UI        | [React 19](https://react.dev) + TypeScript |
+| Styling   | [Tailwind CSS v4](https://tailwindcss.com) |
+| Animation | [Motion](https://motion.dev)             |
+| Icons     | [Lucide](https://lucide.dev)             |
+| Fonts     | Space Grotesk · Inter · JetBrains Mono (via `next/font`) |
+| Analytics | Vercel Analytics + Speed Insights        |
+
+## 🚀 Getting Started
 
 ```bash
+# install dependencies
+npm install
+
+# start the dev server
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Production build
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+npm run build
+npm start
+```
 
-## Learn More
+## ⚙️ Environment Variables
 
-To learn more about Next.js, take a look at the following resources:
+Everything works with zero configuration. Optional variables:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+| Variable                      | Purpose                                              |
+| ----------------------------- | ---------------------------------------------------- |
+| `NEXT_PUBLIC_GITHUB_USERNAME` | GitHub username for the projects feed (default: `Luz-Lucas`) |
+| `GITHUB_TOKEN`                | Optional token to raise the GitHub API rate limit    |
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## ☁️ Deploy on Vercel
 
-## Deploy on Vercel
+This project is ready to deploy on [Vercel](https://vercel.com) out of the box:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+1. Import the repository at [vercel.com/new](https://vercel.com/new)
+2. Framework preset: **Next.js** (auto-detected) — no extra configuration needed
+3. Deploy 🎉
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 📬 Contact
+
+- **Email:** [lucaspmluz@hotmail.com](mailto:lucaspmluz@hotmail.com)
+- **LinkedIn:** [linkedin.com/in/lucas-luz](https://www.linkedin.com/in/lucas-luz)
+- **GitHub:** [github.com/Luz-Lucas](https://github.com/Luz-Lucas)
+
+---
+
+© Lucas Pereira — built with ❤️ and Next.js
